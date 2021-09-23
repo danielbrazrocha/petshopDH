@@ -5,11 +5,10 @@ var LoginController = require('../controllers/LoginController');
 var CadastroController = require('../controllers/CadastroController');
 var ServicosController = require('../controllers/ServicosController');
 var SobreController = require('../controllers/SobreController');
+var IndexController = require('../controllers/IndexController');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', IndexController.index);
 
 // View Contato
 router.get('/contato', ContatoController.index);
