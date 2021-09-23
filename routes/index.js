@@ -3,6 +3,7 @@ var router = express.Router();
 var ContatoController = require('../controllers/ContatoController');
 var LoginController = require('../controllers/LoginController');
 var CadastroController = require('../controllers/CadastroController');
+var ServicosController = require('../controllers/ServicosController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,5 +18,8 @@ router.get('/login', LoginController.index);
 
 // View Cadastro
 router.get('/cadastro', CadastroController.index);
+
+// View Servicos
+router.get('/servicos', ServicosController.index);
 
 module.exports = router;
